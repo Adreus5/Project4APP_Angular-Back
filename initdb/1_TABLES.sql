@@ -24,24 +24,24 @@ CREATE TABLE Lieu
     Description TEXT
 );
 
-CREATE TABLE NoteFilm
+CREATE TABLE note_film
 (
+    id SERIAL PRIMARY KEY ,
     ID_Utilisateur INT,
     ID_Film        INT,
     Note           INT CHECK (Note >= 0 AND Note <= 5),
     Commentaire    VARCHAR(255),
-    PRIMARY KEY (ID_Utilisateur, ID_Film),
     FOREIGN KEY (ID_Utilisateur) REFERENCES Utilisateur (ID_Utilisateur),
     FOREIGN KEY (ID_Film) REFERENCES Film (ID_Film)
 );
 
-CREATE TABLE NoteLieu
+CREATE TABLE note_lieu
 (
+    id SERIAL PRIMARY KEY ,
     ID_Utilisateur INT,
     ID_Lieu        INT,
     Note           INT CHECK (Note >= 0 AND Note <= 5),
     Commentaire    VARCHAR(255),
-    PRIMARY KEY (ID_Utilisateur, ID_Lieu),
     FOREIGN KEY (ID_Utilisateur) REFERENCES Utilisateur (ID_Utilisateur),
     FOREIGN KEY (ID_Lieu) REFERENCES Lieu (ID_Lieu)
 );

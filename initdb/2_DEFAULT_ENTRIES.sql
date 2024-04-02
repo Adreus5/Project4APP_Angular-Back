@@ -24,3 +24,17 @@ INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Place de la B
 INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('5 Av. Anatole France, 75007 Paris', 'Paris', 'Cinema', 'Cinéma offrant une vue imprenable sur la Tour Eiffel.');
 INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Jardin des Tuileries, 75001 Paris', 'Paris', 'Parc', 'Un jardin public situé entre le Louvre et la Place de la Concorde.');
 INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Avenue Winston Churchill, 75008 Paris', 'Paris', 'Musée', 'Le Grand Palais, lieu d\expositions majeures à Paris.');
+
+INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (1, 1, 4, 'Commentaire 6');
+INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (1, 2, 1, 'Commentaire 6');
+INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (2, 3, 3, 'Commentaire 7');
+INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (2, 4, 1, 'Commentaire 7');
+INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (3, 5, 2, 'Commentaire 7');
+
+
+
+INSERT INTO note_lieu (ID_Utilisateur, ID_Lieu, Note, Commentaire) VALUES (1, 2, 3, 'Commentaire 6');
+INSERT INTO note_lieu (ID_Utilisateur, ID_Lieu, Note, Commentaire) VALUES (1, 1, 2, 'Commentaire 7');
+INSERT INTO note_lieu (ID_Utilisateur, ID_Lieu, Note, Commentaire) VALUES (3, 4, 4, 'Commentaire 8');
+INSERT INTO note_lieu (ID_Utilisateur, ID_Lieu, Note, Commentaire) VALUES (4, 4, 3, 'Commentaire 8');
+INSERT INTO note_lieu (ID_Utilisateur, ID_Lieu, Note, Commentaire) VALUES (4, 2, 2, 'Commentaire 9');

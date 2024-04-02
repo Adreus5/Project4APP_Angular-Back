@@ -1,5 +1,6 @@
 package com.takima.backskeleton.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -21,15 +22,15 @@ public class User {
     private String typeUser;
     @ManyToMany
     @JoinTable(
-            name = "NoteFilm",
-            joinColumns = @JoinColumn(name = "ID_Utilisateur"),
-            inverseJoinColumns = @JoinColumn(name = "ID_Film"))
+            name = "note_film",
+            joinColumns = @JoinColumn(name = "ID_Utilisateur",nullable = true),
+            inverseJoinColumns = @JoinColumn(name = "ID_Film",nullable = true))
     private List<Film> films;
     @ManyToMany
     @JoinTable(
-            name = "NoteLieu",
-            joinColumns = @JoinColumn(name = "ID_Utilisateur"),
-            inverseJoinColumns = @JoinColumn(name = "ID_Lieu"))
+            name = "note_lieu",
+            joinColumns = @JoinColumn(name = "ID_Utilisateur",nullable = true),
+            inverseJoinColumns = @JoinColumn(name = "ID_Lieu",nullable = true))
     private List<Lieu> lieux;
 
     private User(Builder builder) {
