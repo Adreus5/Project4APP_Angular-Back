@@ -14,6 +14,7 @@ import java.util.List;
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_Film")
     private Long id;
     @Column(name = "Nom_Film")
     private String nomFilm;

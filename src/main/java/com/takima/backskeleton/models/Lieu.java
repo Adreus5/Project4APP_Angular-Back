@@ -14,6 +14,7 @@ import java.util.List;
 public class Lieu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_Lieu")
     private Long id;
     @Column(name = "Adresse")
     private String adresse;
