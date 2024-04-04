@@ -18,6 +18,8 @@ public class User {
     private String nom;
     @Column(name = "Prenom")
     private String prenom;
+    @Column (name = "Mail")
+    private String mail;
     @Column(name = "Type_User")
     private String typeUser;
     @ManyToMany
@@ -37,6 +39,7 @@ public class User {
         this.id = builder.id;
         this.nom = builder.nom;
         this.prenom = builder.prenom;
+        this.mail = builder.mail;
         this.typeUser = builder.typeUser;
         this.films = builder.films;
         this.lieux = builder.lieux;
@@ -49,6 +52,7 @@ public class User {
         private Long id;
         private String nom;
         private String prenom;
+        private  String mail;
         private String typeUser;
         private List<Film> films;
         private List<Lieu> lieux;
@@ -75,6 +79,11 @@ public class User {
 
         public Builder Lieu(List<Lieu> lieux) {
             this.lieux = lieux;
+            return this;
+        }
+
+        public Builder Mail(String mail) {
+            this.mail = mail;
             return this;
         }
 

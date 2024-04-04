@@ -1,16 +1,18 @@
 -- Insérer 5 Administrateurs avec des noms fictifs
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Dupont', 'Jean', 'Admin');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Durand', 'Marie', 'Admin');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Martin', 'Luc', 'Admin');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Bernard', 'Sophie', 'Admin');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Petit', 'Émile', 'Admin');
+-- Pour les utilisateurs Admin
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Dupont', 'Jean', 'Admin', 'jean.dupont@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Durand', 'Marie', 'Admin', 'marie.durand@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Martin', 'Luc', 'Admin', 'luc.martin@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Bernard', 'Sophie', 'Admin', 'sophie.bernard@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Petit', 'Émile', 'Admin', 'emile.petit@example.com');
 
--- Insérer 5 Clients avec des noms fictifs
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Leroy', 'Isabelle', 'Client');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Moreau', 'Christophe', 'Client');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Simon', 'Patricia', 'Client');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Laurent', 'Olivier', 'Client');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User) VALUES ('Lefebvre', 'Clémence', 'Client');
+-- Pour les clients
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Leroy', 'Isabelle', 'Client', 'isabelle.leroy@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Moreau', 'Christophe', 'Client', 'christophe.moreau@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Simon', 'Patricia', 'Client', 'patricia.simon@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Laurent', 'Olivier', 'Client', 'olivier.laurent@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Lefebvre', 'Clémence', 'Client', 'clemence.lefebvre@example.com');
+
 
 -- Insérer 10 films existants en respectant les genres
 INSERT INTO Film (Nom_Film, Genre, Langue, Synopsis) VALUES ('Inception', 'Action', 'Anglais', 'Un voleur utilise la technologie pour entrer dans les rêves.');

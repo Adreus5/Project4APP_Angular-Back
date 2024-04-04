@@ -3,6 +3,7 @@ CREATE TABLE Utilisateur
     ID_Utilisateur SERIAL PRIMARY KEY,
     Nom            VARCHAR(255),
     Prenom         VARCHAR(255),
+    Mail           VARCHAR(255),
     Type_User      VARCHAR(255) CHECK (Type_User IN ('Admin', 'Client'))
 );
 
@@ -26,7 +27,7 @@ CREATE TABLE Lieu
 
 CREATE TABLE note_film
 (
-    id SERIAL PRIMARY KEY ,
+    id             SERIAL PRIMARY KEY,
     ID_Utilisateur INT,
     ID_Film        INT,
     Note           INT CHECK (Note >= 0 AND Note <= 5),
@@ -37,7 +38,7 @@ CREATE TABLE note_film
 
 CREATE TABLE note_lieu
 (
-    id SERIAL PRIMARY KEY ,
+    id             SERIAL PRIMARY KEY,
     ID_Utilisateur INT,
     ID_Lieu        INT,
     Note           INT CHECK (Note >= 0 AND Note <= 5),
