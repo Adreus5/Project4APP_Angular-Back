@@ -1,6 +1,9 @@
 package com.takima.backskeleton.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +14,7 @@ import java.util.List;
 @Table(name = "Film")
 @Getter
 @NoArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +31,10 @@ public class Film {
     @ManyToMany(mappedBy = "films")
     @JsonIgnore
     private List<User> utilisateurs;
+
+    @OneToMany(mappedBy = "film")
+    @JsonBackReference
+    private List<NoteFilm> noteFilms;
 
 }
 

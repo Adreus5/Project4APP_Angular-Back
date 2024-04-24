@@ -29,7 +29,7 @@ CREATE TABLE note_film
 (
     id             SERIAL PRIMARY KEY,
     ID_Utilisateur INT,
-    ID_Film        INT,
+    ID_Film     INT,
     Note           INT CHECK (Note >= 0 AND Note <= 5),
     Commentaire    VARCHAR(255),
     FOREIGN KEY (ID_Utilisateur) REFERENCES Utilisateur (ID_Utilisateur),

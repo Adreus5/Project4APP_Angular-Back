@@ -12,6 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LieuService {
     private final LieuDao lieuDao;
+
     public List<Lieu> findAll() {
         Iterable<Lieu> it = lieuDao.findAll();
         List <Lieu> lieux = new ArrayList<>();
@@ -19,4 +20,7 @@ public class LieuService {
         return lieux;
     }
 
+    public List<Lieu> findLieuxByUserId(Long userId) {
+        return lieuDao.findLieuxByUserId(userId);
+    }
 }

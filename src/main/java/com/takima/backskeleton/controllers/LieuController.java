@@ -3,12 +3,13 @@ package com.takima.backskeleton.controllers;
 import com.takima.backskeleton.models.Lieu;
 import com.takima.backskeleton.services.LieuService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @CrossOrigin
-@RequestMapping("lieux")
+@RequestMapping("/lieux")
 @RestController
 @RequiredArgsConstructor
 public class LieuController {
@@ -19,4 +20,9 @@ public class LieuController {
         return lieuService.findAll();
     }
 
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<Lieu>> getLieuxByUserId(@PathVariable Long userId) {
+        List<Lieu> lieux = lieuService.findLieuxByUserId(userId);
+        return ResponseEntity.ok(lieux);
+    }
 }
