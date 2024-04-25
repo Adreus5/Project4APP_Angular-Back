@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin()
 @RequestMapping("utilisateurs")
 @RestController
 @RequiredArgsConstructor
@@ -26,7 +26,7 @@ public class UserController<Utilisateur> {
         return userService.getById(id);
     }
 
-    @GetMapping("/{mail}")
+    @GetMapping("/mail")
     public ResponseEntity<User> getUtilisateurByEmail(@RequestParam String mail) {
         User utilisateur = (User) userService.findByEmail(mail);
         if (utilisateur == null) {
