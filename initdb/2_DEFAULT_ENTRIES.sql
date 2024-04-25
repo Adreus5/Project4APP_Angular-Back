@@ -1,10 +1,10 @@
 -- Insérer 5 Administrateurs avec des noms fictifs
 -- Pour les utilisateurs Admin
-INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Dupont', 'Jean', 'Admin', 'jean.dupont@example.com');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Durand', 'Marie', 'Admin', 'marie.durand@example.com');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Martin', 'Luc', 'Admin', 'luc.martin@example.com');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Bernard', 'Sophie', 'Admin', 'sophie.bernard@example.com');
-INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Petit', 'Émile', 'Admin', 'emile.petit@example.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Dupont', 'Jean', 'Admin', 'jean.dupont@admin.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Durand', 'Marie', 'Admin', 'marie.durand@admin.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Martin', 'Luc', 'Admin', 'luc.martin@admin.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Bernard', 'Sophie', 'Admin', 'sophie.bernard@admin.com');
+INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Petit', 'Émile', 'Admin', 'emile.petit@admin.com');
 
 -- Pour les clients
 INSERT INTO Utilisateur (Nom, Prenom, Type_User, Mail) VALUES ('Leroy', 'Isabelle', 'Client', 'isabelle.leroy@example.com');

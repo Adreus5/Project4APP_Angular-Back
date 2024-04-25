@@ -15,7 +15,7 @@ public class LieuService {
 
     public List<Lieu> findAll() {
         Iterable<Lieu> it = lieuDao.findAll();
-        List <Lieu> lieux = new ArrayList<>();
+        List<Lieu> lieux = new ArrayList<>();
         it.forEach(lieux::add);
         return lieux;
     }
