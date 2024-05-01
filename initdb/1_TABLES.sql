@@ -19,9 +19,10 @@ CREATE TABLE Film
 CREATE TABLE Lieu
 (
     ID_Lieu     SERIAL PRIMARY KEY,
+    Nom         VARCHAR(255),
     Adresse     VARCHAR(255),
     Ville       VARCHAR(255),
-    Type_Lieu   VARCHAR(255) CHECK (Type_Lieu IN ('Restaurant', 'Bar', 'Cinema', 'Parc', 'Musée')),
+    Type_Lieu   VARCHAR(255) CHECK (Type_Lieu IN ('Restaurant', 'Bar', 'Cinema', 'Parc', 'Musée', 'Monument')),
     Description TEXT
 );
 

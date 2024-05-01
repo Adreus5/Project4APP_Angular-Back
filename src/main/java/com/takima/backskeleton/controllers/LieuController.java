@@ -19,4 +19,9 @@ public class LieuController {
         return lieuService.findAll();
     }
 
+    @GetMapping("/lieux")
+    public List<Lieu> getAllLieux() {
+        return lieuService.findAll();
+    }
+
 }

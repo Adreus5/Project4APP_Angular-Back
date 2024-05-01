@@ -19,4 +19,9 @@ public class FilmController {
         return filmService.findAll();
     }
 
+    @GetMapping("/films")
+    public List<Film> getAllFilms() {
+        return filmService.findAll();
+    }
+
 }

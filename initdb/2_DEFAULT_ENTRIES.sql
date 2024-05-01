@@ -21,11 +21,11 @@ INSERT INTO Film (Nom_Film, Genre, Langue, Synopsis) VALUES ('Conjuring', 'Horre
 INSERT INTO Film (Nom_Film, Genre, Langue, Synopsis) VALUES ('Titanic', 'Drame', 'Anglais', 'Un artiste pauvre et une riche héritière tombent amoureux à bord du Titanic.');
 INSERT INTO Film (Nom_Film, Genre, Langue, Synopsis) VALUES ('Amélie', 'Romance', 'Français', 'Une serveuse décide de changer la vie des gens autour d\elle pour le mieux.');
 
-INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Rue de Rivoli, 75001 Paris', 'Paris', 'Musée', 'Le musée du Louvre, le plus grand musée d\art et d\antiquités au monde.');
-INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Place de la Bastille, 75011 Paris', 'Paris', 'Bar', 'Un bar historique au cœur de Paris.');
-INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('5 Av. Anatole France, 75007 Paris', 'Paris', 'Cinema', 'Cinéma offrant une vue imprenable sur la Tour Eiffel.');
-INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Jardin des Tuileries, 75001 Paris', 'Paris', 'Parc', 'Un jardin public situé entre le Louvre et la Place de la Concorde.');
-INSERT INTO Lieu (Adresse, Ville, Type_Lieu, Description) VALUES ('Avenue Winston Churchill, 75008 Paris', 'Paris', 'Musée', 'Le Grand Palais, lieu d\expositions majeures à Paris.');
+INSERT INTO Lieu (Nom, Adresse, Ville, Type_Lieu, Description) VALUES ('Musée du Louvre','Rue de Rivoli, 75001 Paris', 'Paris', 'Musée', 'Le musée du Louvre, le plus grand musée d\art et d\antiquités au monde.');
+INSERT INTO Lieu (Nom, Adresse, Ville, Type_Lieu, Description) VALUES ('Bar la bastille','Place de la Bastille, 75011 Paris', 'Paris', 'Bar', 'Un bar historique au cœur de Paris.');
+INSERT INTO Lieu (Nom, Adresse, Ville, Type_Lieu, Description) VALUES ('Tour Eiffel','5 Av. Anatole France, 75007 Paris', 'Paris', 'Monument', 'La Tour Eiffel le monument avec la plus grande renommé de la France');
+INSERT INTO Lieu (Nom, Adresse, Ville, Type_Lieu, Description) VALUES ('Jardin des Tuileries','Jardin des Tuileries, 75001 Paris', 'Paris', 'Parc', 'Un jardin public situé entre le Louvre et la Place de la Concorde.');
+INSERT INTO Lieu (Nom, Adresse, Ville, Type_Lieu, Description) VALUES ('Le Grand Palais','Avenue Winston Churchill, 75008 Paris', 'Paris', 'Musée', 'Le Grand Palais, lieu d\expositions majeures à Paris.');
 
 INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (1, 1, 4, 'Commentaire 6');
 INSERT INTO note_film (ID_Utilisateur, ID_Film, Note, Commentaire) VALUES (1, 2, 1, 'Commentaire 6');

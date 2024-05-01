@@ -16,6 +16,8 @@ public class Lieu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_Lieu")
     private Long id;
+    @Column(name = "Nom")
+    private String nom;
     @Column(name = "Adresse")
     private String adresse;
     @Column(name = "Ville")
