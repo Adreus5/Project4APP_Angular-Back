@@ -1,6 +1,7 @@
 package com.takima.backskeleton.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -27,6 +28,7 @@ public class User {
             name = "note_film",
             joinColumns = @JoinColumn(name = "ID_Utilisateur",nullable = true),
             inverseJoinColumns = @JoinColumn(name = "ID_Film",nullable = true))
+    @JsonManagedReference
     private List<Film> films;
     @ManyToMany
     @JoinTable(

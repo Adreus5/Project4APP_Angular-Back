@@ -3,15 +3,16 @@ package com.takima.backskeleton.controllers;
 import com.takima.backskeleton.models.User;
 import com.takima.backskeleton.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin()
 @RequestMapping("utilisateurs")
 @RestController
 @RequiredArgsConstructor
-public class UserController {
+public class UserController<Utilisateur> {
     private final UserService userService;
 
     @GetMapping("")
@@ -23,6 +24,15 @@ public class UserController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         return userService.getById(id);
+    }
+
+    @GetMapping("/mail")
+    public ResponseEntity<User> getUtilisateurByEmail(@RequestParam String mail) {
+        User utilisateur = (User) userService.findByEmail(mail);
+        if (utilisateur == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(utilisateur);
     }
 
     @DeleteMapping("/{id}")

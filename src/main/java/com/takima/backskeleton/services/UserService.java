@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserService<Utilisateur> {
     private final UserDao userDao;
 
     public List<User> findAll() {
@@ -25,7 +25,9 @@ public class UserService {
     public User getById(Long id) {
         return userDao.findById(id).orElseThrow();
     }
-
+    public Utilisateur findByEmail(String mail) {
+        return (Utilisateur) userDao.findByMail(mail).orElse(null);
+    }
     @Transactional
     public void deleteById(Long id) {
         userDao.deleteById(id);

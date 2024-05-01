@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Lieu")
@@ -29,4 +30,6 @@ public class Lieu {
     @ManyToMany(mappedBy = "lieux")
     @JsonIgnore
     List<User> utilisateurs;
+    @OneToMany(mappedBy = "lieu") // Assurez-vous que l'attribut 'lieu' dans NoteLieu correspond
+    private Set<NoteLieu> noteLieus;
 }
