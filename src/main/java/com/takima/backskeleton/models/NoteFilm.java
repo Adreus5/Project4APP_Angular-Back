@@ -1,6 +1,6 @@
 package com.takima.backskeleton.models;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,7 +20,7 @@ public class NoteFilm {
 
     @ManyToOne
     @JoinColumn(name = "ID_Film")
-    @JsonManagedReference
+    @JsonBackReference
     private Film film;
 
     // champs Note et Commentaire si nécessaire

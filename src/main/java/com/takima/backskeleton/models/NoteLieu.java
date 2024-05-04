@@ -1,5 +1,5 @@
 package com.takima.backskeleton.models;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +19,7 @@ public class NoteLieu {
 
     @ManyToOne
     @JoinColumn(name = "ID_Lieu")
+    @JsonBackReference
     private Lieu lieu;
 
     @Column(name = "Note")

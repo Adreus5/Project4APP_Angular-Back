@@ -20,6 +20,7 @@ public class LieuService {
         return lieux;
     }
 
+
     public List<Lieu> findLieuxByUserId(Long userId) {
         return lieuDao.findLieuxByUserId(userId);
     }
