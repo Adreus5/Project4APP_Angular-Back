@@ -28,4 +28,44 @@ public class NoteLieu {
     @Column(name = "Commentaire")
     private String commentaire;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(User utilisateur) {
+        this.utilisateur = utilisateur;
+    }
+
+    public Lieu getLieu() {
+        return lieu;
+    }
+
+    public void setLieu(Lieu lieu) {
+        this.lieu = lieu;
+    }
+
+    public Integer getNote() {
+        return note;
+    }
+
+    public void setNote(Integer note) {
+        this.note = note;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+
 }
