@@ -17,7 +17,6 @@ public class UserController<Utilisateur> {
 
     @GetMapping("")
     public List<User> listUser() {
-
         return userService.findAll();
     }
 
@@ -45,8 +44,8 @@ public class UserController<Utilisateur> {
         userService.addUser(user);
     }
 
-    @PostMapping("/{id}")
-    public void updateUser(@RequestBody User user, @PathVariable Long id) {
+    @PutMapping("/{id}")
+    public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable Long id) {
         userService.updateUser(user, id);
-    }
-}
+        return ResponseEntity.ok(user);
+    }}
