@@ -24,4 +24,5 @@ public class LieuService {
     public List<Lieu> findLieuxByUserId(Long userId) {
         return lieuDao.findLieuxByUserId(userId);
     }
+
 }
