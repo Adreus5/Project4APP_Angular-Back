@@ -39,6 +39,10 @@ public class Film {
     private String langue;
     @Setter
     @Getter
+    @Column(name = "Realisateur")
+    private String realisateur;
+    @Setter
+    @Getter
     @Column(name = "Synopsis")
     private String synopsis;
     @ManyToMany(mappedBy = "films")

@@ -13,6 +13,7 @@ CREATE TABLE Film
     Nom_Film VARCHAR(255),
     Genre    VARCHAR(255) CHECK (Genre IN ('Action', 'Comédie', 'Horreur', 'Drame', 'Romance')),
     Langue   VARCHAR(255) CHECK (Langue IN ('Français', 'Anglais')),
+    Realisateur VARCHAR(255),
     Synopsis TEXT
 );
 

@@ -32,6 +32,7 @@ public class FilmService {
                     film.setNomFilm(filmDetails.getNomFilm());
                     film.setGenre(filmDetails.getGenre());
                     film.setLangue(filmDetails.getLangue());
+                    film.setRealisateur(filmDetails.getRealisateur());
                     film.setSynopsis(filmDetails.getSynopsis());
                     return filmDao.save(film);
                 });
