@@ -1,4 +1,4 @@
-# Authors : Aidan Fernández, Youssef Guiza, Thomas Derby, Yassine Boutouil
+# Authors : Aidan Fernández, Youssef Guiza, Thomas Dorby, Yassine Boutouil
 
 ## Your backend API
 
