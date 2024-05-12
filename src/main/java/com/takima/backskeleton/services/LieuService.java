@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
@@ -20,8 +21,35 @@ public class LieuService {
         return lieux;
     }
 
+    public Optional<Lieu> findById(Long id) {
+        return lieuDao.findById(id);
+    }
 
     public List<Lieu> findLieuxByUserId(Long userId) {
         return lieuDao.findLieuxByUserId(userId);
+    }
+
+    public Lieu save(Lieu lieu) {
+        return lieuDao.save(lieu);
+    }
+
+    public Optional<Lieu> update(Long id, Lieu lieuDetails) {
+        return lieuDao.findById(id)
+                .map(lieu -> {
+                    lieu.setNom(lieuDetails.getNom());
+                    lieu.setAdresse(lieuDetails.getAdresse());
+                    lieu.setVille(lieuDetails.getVille());
+                    lieu.setTypeLieu(lieuDetails.getTypeLieu());
+                    lieu.setDescription(lieuDetails.getDescription());
+                    return lieuDao.save(lieu);
+                });
+    }
+
+    public boolean deleteById(Long id) {
+        if (lieuDao.existsById(id)) {
+            lieuDao.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }
